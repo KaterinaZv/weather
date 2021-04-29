@@ -4,23 +4,25 @@ import { CITY_ACTIONS } from './keys';
 
 import { City } from './../../model/city';
 
-import { CITIES } from '../../../constants/cities';
+import API_ENDPOINTS from '../../../config/api';
 
-export const getCity = (name: string): Action<string, { query: string; city: Nullable<City> }> => {
-  const city = CITIES.find(city => city.name.toLocaleLowerCase() === name.toLocaleLowerCase()) || null;
-
-  return ({
-    type: CITY_ACTIONS.GET_CITY_BY_NAME,
-    payload: {
-      query: name,
-      city,
+export const getCityList = (name: string) => ({
+  type: CITY_ACTIONS.GET_CITY_BY_NAME,
+  payload: {
+    request: {
+      url: API_ENDPOINTS.SEARCH_LOCATION,
+      params: {
+        query: name,
+      },
     },
-  })
-};
+  },
+});
+
+//https://www.metaweather.com/api/location/search/?query=san
 
 export const chooseCity = (city: City): Action<string, { city: City }> => ({
   type: CITY_ACTIONS.CHOOSE_CITY,
   payload: {
     city
   }
-})
+});
