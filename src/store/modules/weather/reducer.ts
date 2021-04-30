@@ -9,7 +9,7 @@ export function weatherReducer(state = weatherStoreInitialState, action: Action<
     case WEATHER_ACTIONS.GET_WEATHER_SUCCESS:
       return {
         ...state,
-        weather: action.payload.weather.data,
+        weather: action.payload.data,
       };
 
     default:
