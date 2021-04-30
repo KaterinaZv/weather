@@ -1,14 +1,9 @@
-import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-import { ROUTES } from "../../constants/routes";
-import CitiesListContainer from "./cities/cities-list-container";
-import NotFoundContainer from "./notfound/notfound-container";
-import WeatherContainer from "./weather/weather-container";
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { ROUTES } from '../../constants/routes';
+import CitiesListContainer from './cities/cities-list-container';
+import NotFoundContainer from './notfound/notfound-container';
+import WeatherContainer from './weather/weather-container';
 
 const WeatherApplicationRouter: React.FC = () => (
   <Router>
@@ -25,8 +20,7 @@ const WeatherApplicationRouter: React.FC = () => (
         <NotFoundContainer />
       </Route>
     </Switch>
-
-  </Router >
+  </Router>
 );
 
 export default WeatherApplicationRouter;

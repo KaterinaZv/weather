@@ -1,7 +1,7 @@
 import { AxiosAction } from './../../types/Action';
-import API_ENDPOINTS from "../../../config/api";
-import { City } from "../../model/city";
-import { WEATHER_ACTIONS } from "./keys";
+import API_ENDPOINTS from '../../../config/api';
+import { City } from '../../model/city';
+import { WEATHER_ACTIONS } from './keys';
 
 export const getWeather = (city: City): AxiosAction<typeof WEATHER_ACTIONS.GET_WEATHER, {}> => ({
   type: WEATHER_ACTIONS.GET_WEATHER,

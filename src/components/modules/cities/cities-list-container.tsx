@@ -20,7 +20,7 @@ const useStyles = makeStyles({
     justifyContent: 'center',
     alignItems: 'center',
     height: '100vh',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
 });
 
@@ -29,20 +29,17 @@ const CitiesListContainer: React.FC = () => {
 
   const [currentCity, setCity] = React.useState<Nullable<City>>(null);
 
-  const cities = useSelector<Store, City[]>(store => store.city.cities);
+  const cities = useSelector<Store, City[]>((store) => store.city.cities);
 
   const onChange = (city: Nullable<City>) => setCity(city);
 
   return (
     <Container maxWidth="sm" className={classes.container}>
-      <CitiesFilter
-        cities={cities}
-        onChange={onChange}
-      />
+      <CitiesFilter cities={cities} onChange={onChange} />
 
       <CitiesSelectButton currentCity={currentCity} />
     </Container>
-  )
+  );
 };
 
 export default CitiesListContainer;

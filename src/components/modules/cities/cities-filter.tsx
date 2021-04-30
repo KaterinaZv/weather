@@ -9,13 +9,12 @@ import { Nullable } from '../../../types/generic/Nullable';
 type Props = {
   cities: City[];
   onChange: (city: Nullable<City>) => void;
-}
+};
 
 const CitiesFilter: React.FC<Props> = ({ cities, onChange }) => {
-
   const onChangeHandle = (e: React.ChangeEvent<{}>, city: Nullable<City>) => {
     onChange(city);
-  }
+  };
 
   return (
     <Autocomplete
@@ -26,7 +25,7 @@ const CitiesFilter: React.FC<Props> = ({ cities, onChange }) => {
       renderInput={(params) => <TextField {...params} label="Выберите город" variant="outlined" />}
       onChange={onChangeHandle}
     />
-  )
-}
+  );
+};
 
 export default CitiesFilter;

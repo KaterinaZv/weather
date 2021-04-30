@@ -2,7 +2,7 @@ import React from 'react';
 
 import { ROUTES } from '../../../constants/routes';
 
-import { useHistory } from "react-router-dom";
+import { useHistory } from 'react-router-dom';
 
 import { Nullable } from '../../../types/generic/Nullable';
 
@@ -19,7 +19,7 @@ const useStyles = makeStyles({
     justifyContent: 'center',
     alignItems: 'center',
     height: '100vh',
-    flexDirection: 'column'
+    flexDirection: 'column',
   },
   button: {
     marginTop: '16px',
@@ -27,14 +27,13 @@ const useStyles = makeStyles({
     boxShadow: 'none',
     '&:hover': {
       boxShadow: 'none',
-
-    }
+    },
   },
 });
 
 type Props = {
   currentCity: Nullable<City>;
-}
+};
 
 const CitiesSelectButton: React.FC<Props> = ({ currentCity }) => {
   const classes = useStyles();
@@ -47,7 +46,7 @@ const CitiesSelectButton: React.FC<Props> = ({ currentCity }) => {
 
       history.push(ROUTES.weather);
     }
-  }
+  };
 
   return (
     <Button
@@ -60,6 +59,6 @@ const CitiesSelectButton: React.FC<Props> = ({ currentCity }) => {
       ВЫБРАТЬ ГОРОД
     </Button>
   );
-}
+};
 
 export default CitiesSelectButton;

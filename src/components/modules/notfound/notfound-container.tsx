@@ -1,17 +1,17 @@
 import React from 'react';
 
-import {
-  Link,
-} from "react-router-dom";
+import Container from '@material-ui/core/Container';
+
+import { Link } from 'react-router-dom';
 
 const NotFoundContainer: React.FC = () => (
-  <div>
+  <Container maxWidth="sm">
     <h1>NOT FOUND :(((9</h1>
 
     <li>
       <Link to="/">Home</Link>
     </li>
-  </div>
-)
+  </Container>
+);
 
 export default NotFoundContainer;

@@ -1,4 +1,4 @@
-import { Action } from '../../types/Action'
+import { Action } from '../../types/Action';
 import { CITY_ACTIONS } from './keys';
 
 import { City } from './../../model/city';
@@ -8,6 +8,6 @@ import { City } from './../../model/city';
 export const chooseCity = (city: City): Action<string, { city: City }> => ({
   type: CITY_ACTIONS.CHOOSE_CITY,
   payload: {
-    city
-  }
+    city,
+  },
 });

@@ -6,4 +6,4 @@ export type City = {
   state: string;
   country: string;
   coord: Coord;
-}
+};

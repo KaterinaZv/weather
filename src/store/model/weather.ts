@@ -6,7 +6,7 @@ export type Forecast = {
   sunrise: string;
   sunset: string;
   week: number;
-}
+};
 
 export type Fact = {
   condition: string;
@@ -15,7 +15,7 @@ export type Fact = {
   humidity: number;
   icon: string;
   obs_time: number;
-  polar: false
+  polar: false;
   pressure_mm: number;
   pressure_pa: number;
   season: string;
@@ -23,4 +23,4 @@ export type Fact = {
   wind_dir: string;
   wind_gust: number;
   wind_speed: number;
-}
+};
