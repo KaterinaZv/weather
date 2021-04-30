@@ -3,6 +3,6 @@ import { CITIES } from "../../../constants/cities";
 import { CityState } from "./reducer-types";
 
 export const cityReducerInitialState: CityState = {
-  cities: [],
+  cities: CITIES,
   choosedCity: null,
 }

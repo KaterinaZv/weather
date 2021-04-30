@@ -9,11 +9,9 @@ import { Nullable } from '../../../types/generic/Nullable';
 type Props = {
   cities: City[];
   onChange: (city: Nullable<City>) => void;
-  onInputChange: (value: Nullable<string>) => void;
 }
 
-const CitiesFilter: React.FC<Props> = ({ cities, onChange, onInputChange }) => {
-  const onInputChangeHandle = (e: React.ChangeEvent<any>) => onInputChange(e.target.value);
+const CitiesFilter: React.FC<Props> = ({ cities, onChange }) => {
 
   const onChangeHandle = (e: React.ChangeEvent<{}>, city: Nullable<City>) => {
     onChange(city);
@@ -27,7 +25,6 @@ const CitiesFilter: React.FC<Props> = ({ cities, onChange, onInputChange }) => {
       fullWidth
       renderInput={(params) => <TextField {...params} label="Выберите город" variant="outlined" />}
       onChange={onChangeHandle}
-      onInputChange={onInputChangeHandle}
     />
   )
 }

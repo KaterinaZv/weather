@@ -1,5 +1,3 @@
-import { API_KEY } from './../config/api';
-
 import API_ENDPOINTS from '../config/api';
 
 import { applyMiddleware, createStore, compose, Store } from 'redux';
@@ -12,13 +10,7 @@ import axiosMiddleware from 'redux-axios-middleware';
 export default function configureStore(): Store {
   const client = axios.create({
     baseURL: API_ENDPOINTS.BASE_API_URL,
-    responseType: 'json',
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-    }
   });
-
-  if (!API_KEY) console.error(new Error('Отсутсвует weather api key!'));
 
   // @ts-ignore
   const composeEnhancers = (typeof window !== 'undefined' && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;

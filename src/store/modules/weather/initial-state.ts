@@ -1,2 +1,5 @@
-export const weatherStoreInitialState = {
+import { WeatherState } from './reducer-types';
+
+export const weatherStoreInitialState: WeatherState = {
+  weather: null,
 }

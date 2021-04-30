@@ -14,8 +14,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import CitiesFilter from './cities-filter';
 import CitiesSelectButton from './cities-select-button';
 
-import { getCityList } from '../../../store/modules/city/actions';
-
 const useStyles = makeStyles({
   container: {
     display: 'flex',
@@ -27,8 +25,6 @@ const useStyles = makeStyles({
 });
 
 const CitiesListContainer: React.FC = () => {
-  const dispatch = useDispatch();
-
   const classes = useStyles();
 
   const [currentCity, setCity] = React.useState<Nullable<City>>(null);
@@ -37,18 +33,11 @@ const CitiesListContainer: React.FC = () => {
 
   const onChange = (city: Nullable<City>) => setCity(city);
 
-  const onInputChange = debounce((value: Nullable<string>) => {
-    if (!value) return;
-
-    dispatch(getCityList(value))
-  }, 400);
-
   return (
     <Container maxWidth="sm" className={classes.container}>
       <CitiesFilter
         cities={cities}
         onChange={onChange}
-        onInputChange={onInputChange}
       />
 
       <CitiesSelectButton currentCity={currentCity} />
