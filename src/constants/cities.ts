@@ -192,16 +192,6 @@ export const CITIES: City[] = [
     },
   },
   {
-    id: 524894,
-    name: 'Moscow',
-    state: '',
-    country: 'RU',
-    coord: {
-      lon: 37.606667,
-      lat: 55.761665,
-    },
-  },
-  {
     id: 524901,
     name: 'Moscow',
     state: '',

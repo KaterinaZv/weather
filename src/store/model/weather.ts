@@ -24,3 +24,17 @@ export type Fact = {
   wind_gust: number;
   wind_speed: number;
 };
+
+export type Info = {
+  url: string;
+  lat: number;
+  lon: number;
+}
+
+export type Weather = {
+  forecast: Forecast;
+  fact: Fact;
+  now: number;
+  now_dt: string;
+  info: Info;
+};

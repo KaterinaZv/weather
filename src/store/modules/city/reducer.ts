@@ -7,14 +7,14 @@ import { CITY_ACTIONS } from './keys';
 
 export function cityReducer(state: CityState = cityReducerInitialState, action: Action<string, any>): CityState {
   switch (action.type) {
-    case CITY_ACTIONS.CHOOSE_CITY:
-      return {
-        ...state,
-        choosedCity: action.payload.city,
-      };
+  case CITY_ACTIONS.CHOOSE_CITY:
+    return {
+      ...state,
+      choosedCity: action.payload.city,
+    };
 
-    default:
-      break;
+  default:
+    break;
   }
 
   return state;
